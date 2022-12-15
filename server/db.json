@@ -1,0 +1,46 @@
+{
+  "documents1": [
+    {
+      "id": "1234234",
+      "status": "active",
+      "sum": 5000,
+      "qty": 20,
+      "volume": 50000,
+      "name": "Book 1",
+      "delivery_date": "10.01.2023",
+      "currency": "₽"
+    },
+    {
+      "id": "2124124",
+      "status": "archive",
+      "sum": 4500,
+      "qty": 7,
+      "volume": 90000,
+      "name": "Book 2",
+      "delivery_date": "11.02.2019",
+      "currency": "₽"
+    }
+  ],
+  "documents2": [
+    {
+      "id": "112424",
+      "status": "active",
+      "sum": 7000,
+      "qty": 100,
+      "volume": 56000,
+      "name": "Backpack 1",
+      "delivery_date": "29.12.2022",
+      "currency": "₽"
+    },
+    {
+      "id": "254235",
+      "status": "archive",
+      "sum": 3500,
+      "qty": 12,
+      "volume": 24500,
+      "name": "Backpack 2",
+      "delivery_date": "05.08.2021",
+      "currency": "₽"
+    }
+  ]
+}

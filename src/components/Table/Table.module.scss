@@ -1,0 +1,34 @@
+@import "../../scss/variables";
+
+.root {
+  margin-bottom: 20px;
+  border-radius: $raduis;
+  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+}
+
+.ul {
+  width: 100%;
+  height: 40px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid;
+  }
+
+  & li {
+    flex-basis: 14.375%;
+
+    &:first-child {
+      flex-basis: 35px;
+    }
+
+    // &:not(:last-child) {
+    //   border-right: 1px solid;
+    // }
+  }
+}

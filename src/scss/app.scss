@@ -1,0 +1,15 @@
+@import "./variables";
+@import "./libs/normalize";
+
+.container {
+  width: $container-width;
+  margin: 0 auto;
+}
+
+.app {
+  padding: 40px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
