@@ -1,4 +1,3 @@
-import React from "react";
 import { selectProductData } from "../redux/product/selectors";
 import { useAppSelector } from "../redux/store";
 import { calcTotalQuantity } from "../utils/calcTotalQuantity";

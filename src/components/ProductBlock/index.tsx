@@ -29,11 +29,9 @@ export const ProductBlock: React.FC<PropType> = ({
         <input type="checkbox" />
       </li>
       <li>{name}</li>
-      <li>{status === "active" ? "Активно" : "В архиве"}</li>
-      <li>
-        {sum} {currency}
-      </li>
-      <li>{qty} шт</li>
+      <li>{status[0].toUpperCase() + status.slice(1)}</li>
+      <li>{sum}</li>
+      <li>{qty}</li>
       <li>{delivery_date}</li>
       <li>{currency}</li>
       <li>{volume}</li>

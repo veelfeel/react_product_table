@@ -1,5 +1,9 @@
-import React from "react";
+import { Search } from "./Search";
 
 export const Header = () => {
-  return <header className="mb-20">Header</header>;
+  return (
+    <header className="mb-20">
+      <Search />
+    </header>
+  );
 };

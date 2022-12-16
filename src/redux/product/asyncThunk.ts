@@ -1,23 +1,27 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import URLs from "../../utils/apiUrls";
-import { SearchProductParams } from "../filters/types";
 import { Product } from "./types";
 
 export const fetchProducts = createAsyncThunk<
   Product[],
-  SearchProductParams,
+  undefined,
   { rejectValue: string }
->("products/fetchProducts", async (params, { rejectWithValue }) => {
+>("products/fetchProducts", async (_, { rejectWithValue }) => {
   try {
-    const { searchValue } = params;
+    let dataArr = [];
 
     const fetchData = async (url: string) => {
-      const response = await fetch(`${url}/?q=${searchValue}`);
+      const response = await fetch(url);
       return await response.json();
     };
 
-    const data = await Promise.all(URLs.map(fetchData));
-    return data[0].concat(data[1]) as Product[];
+    const promiseAll = await Promise.all(URLs.map(fetchData));
+
+    for (const dat of promiseAll) {
+      dataArr.push(...dat);
+    }
+
+    return dataArr as Product[];
   } catch (error) {
     return rejectWithValue("Не удалось получить товары");
   }
