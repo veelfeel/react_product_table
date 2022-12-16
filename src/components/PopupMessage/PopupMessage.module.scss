@@ -1,0 +1,61 @@
+@import "../../scss/variables";
+
+.root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  padding: 50px;
+  border-radius: $radius;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "text text"
+    "... ...";
+  justify-items: center;
+  background-color: white;
+  box-shadow: 0 0 20px 22px #f2f0ff82;
+  transition: $transition;
+
+  &:hover {
+    box-shadow: 0 0 6px 12px rgb(97 114 211 / 10%);
+    transition: $transition;
+  }
+}
+
+.message {
+  margin-bottom: 20px;
+  grid-area: text;
+}
+
+.button {
+  &:not(:last-child) {
+    margin-right: 10px;
+    background-color: #5c73da;
+    color: white;
+    transition: $transition;
+
+    &:hover {
+      background-color: darken(#5c73da, 6%);
+      transition: $transition;
+    }
+  }
+
+  &:last-child {
+    justify-self: flex-end;
+    background-color: rgb(255 242 28 / 43%);
+
+    &:hover {
+      background-color: rgb(255 242 38 / 62%);
+      transition: $transition;
+    }
+  }
+}

@@ -2,14 +2,26 @@
 @import "./libs/normalize";
 
 .container {
-  width: $container-width;
+  max-width: $container-width;
   margin: 0 auto;
-}
-
-.app {
-  padding: 40px;
+  padding: 20px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 .mb-20 {
   margin-bottom: 20px;
+}
+
+header {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid;
 }

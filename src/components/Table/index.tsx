@@ -21,21 +21,23 @@ export const Table: React.FC = () => {
   ));
 
   return (
-    <div className={styles.root}>
-      <ul className={styles.ul}>
-        <li>
-          <input type="checkbox" />
-        </li>
-        <li>Название</li>
-        <li>Статус</li>
-        <li>Сумма</li>
-        <li>Количество</li>
-        <li>Дата доставки</li>
-        <li>Валюта</li>
-        <li>Объем</li>
-        <li>Всего</li>
-      </ul>
-      {productBlocks}
-    </div>
+    <main>
+      <div className={styles.root}>
+        <ul className={styles.ul}>
+          <li>
+            <input type="checkbox" />
+          </li>
+          <li>Название</li>
+          <li>Статус</li>
+          <li>Сумма</li>
+          <li>Количество</li>
+          <li>Дата доставки</li>
+          <li>Валюта</li>
+          <li>Объем</li>
+          <li>Всего</li>
+        </ul>
+        {productBlocks}
+      </div>
+    </main>
   );
 };

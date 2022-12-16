@@ -3,7 +3,7 @@ import { useAppSelector } from "../redux/store";
 import { calcTotalQuantity } from "../utils/calcTotalQuantity";
 import { calcTotalVolume } from "../utils/calcTotalVolume";
 
-export const Footer = () => {
+export const Footer: React.FC = () => {
   const { products } = useAppSelector(selectProductData);
 
   const totalVolume = calcTotalVolume(products);

@@ -44,6 +44,15 @@ a {
   text-decoration: none;
 }
 
+button {
+  width: 120px;
+  height: 44px;
+  padding: 10px;
+  border-radius: $radius;
+  border: none;
+  cursor: pointer;
+}
+
 @mixin noselect {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */

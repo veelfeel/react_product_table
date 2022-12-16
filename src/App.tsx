@@ -1,8 +1,10 @@
 import React from "react";
 
 import { Header } from "./components/Header";
-import { Footer } from "./components/Footer";
 import { Table } from "./components/Table";
+import { CancelButton } from "./components/CancelButton";
+import { PopupMessage } from "./components/PopupMessage";
+import { Footer } from "./components/Footer";
 
 import { fetchProducts } from "./redux/product/asyncThunk";
 import { useAppDispatch } from "./redux/store";
@@ -21,12 +23,12 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className="app">
-      <div className="container">
-        <Header />
-        <Table />
-        <Footer />
-      </div>
+    <div className="container">
+      <Header />
+      <Table />
+      <CancelButton />
+      <PopupMessage />
+      <Footer />
     </div>
   );
 }
