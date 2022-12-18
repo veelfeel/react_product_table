@@ -10,13 +10,38 @@
   grid-template-rows: auto 1fr auto;
 }
 
-.mb-20 {
-  margin-bottom: 20px;
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: rgb(231, 231, 231);
+  color: rgb(82, 82, 82);
+
+  &:hover {
+    background-color: rgb(231, 231, 231);
+    cursor: not-allowed;
+  }
+}
+
+.popup {
+  visibility: hidden;
+  opacity: 0;
+  transition: $transition;
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+    transition: $transition;
+  }
 }
 
 header {
   padding-top: 40px;
   padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 footer {

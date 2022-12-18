@@ -3,9 +3,10 @@ import { useDispatch, useSelector, TypedUseSelectorHook } from "react-redux";
 
 import filters from "./filters/slice";
 import products from "./product/slice";
+import cancelProducts from "./cancel/slice";
 
 export const store = configureStore({
-  reducer: { filters, products },
+  reducer: { filters, products, cancelProducts },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

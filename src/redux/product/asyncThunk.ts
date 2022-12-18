@@ -6,7 +6,7 @@ export const fetchProducts = createAsyncThunk<
   Product[],
   undefined,
   { rejectValue: string }
->("products/fetchProducts", async (_, { rejectWithValue }) => {
+>("products/fetchProducts", async (params, { rejectWithValue }) => {
   try {
     let dataArr = [];
 

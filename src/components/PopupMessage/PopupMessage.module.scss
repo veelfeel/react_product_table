@@ -12,15 +12,19 @@
 }
 
 .content {
-  padding: 50px;
+  max-width: 480px;
+  height: 230px;
+  padding: 40px;
   border-radius: $radius;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas:
     "text text"
-    "... ...";
+    "names names"
+    "button_primary button_secondary";
   justify-items: center;
+  text-align: center;
   background-color: white;
   box-shadow: 0 0 20px 22px #f2f0ff82;
   transition: $transition;
@@ -32,30 +36,39 @@
 }
 
 .message {
-  margin-bottom: 20px;
+  line-height: 2;
   grid-area: text;
 }
 
-.button {
-  &:not(:last-child) {
-    margin-right: 10px;
-    background-color: #5c73da;
-    color: white;
+.names {
+  grid-area: names;
+}
+
+button {
+  align-self: center;
+}
+
+.button_primary {
+  justify-self: flex-end;
+  margin-right: 14px;
+  background-color: $primary;
+  color: white;
+  transition: $transition;
+
+  &:hover {
+    background-color: darken($primary, 6%);
     transition: $transition;
-
-    &:hover {
-      background-color: darken(#5c73da, 6%);
-      transition: $transition;
-    }
   }
+}
 
-  &:last-child {
-    justify-self: flex-end;
-    background-color: rgb(255 242 28 / 43%);
+.button_secondary {
+  justify-self: flex-start;
+  margin-left: 14px;
+  background-color: $secondary;
+  transition: $transition;
 
-    &:hover {
-      background-color: rgb(255 242 38 / 62%);
-      transition: $transition;
-    }
+  &:hover {
+    background-color: rgb(252 238 0 / 58%);
+    transition: $transition;
   }
 }

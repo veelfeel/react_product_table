@@ -1,31 +1,39 @@
 @import "../../scss/variables";
 
-.root {
-  margin-bottom: 20px;
-  border-radius: $radius;
-  border: 1px solid;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.ul {
+table {
+  margin-bottom: 40px;
   width: 100%;
-  height: 44px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
+  border-radius: $radius;
+  border: 1px solid #e7e7e7;
+  table-layout: fixed;
   text-align: center;
 
-  &:not(:last-child) {
-    border-bottom: 1px solid;
+  & thead {
+    & th {
+      padding: 12px;
+      font-weight: 500;
+    }
   }
 
-  & li {
-    flex-basis: 14.375%;
+  & tbody {
+    & tr {
+      border: 1px solid #e7e7e7;
 
-    &:first-child {
-      flex-basis: 35px;
+      &:nth-child(odd) {
+        background: #fff;
+      }
+
+      &:nth-child(even) {
+        background: #f7f7f7;
+      }
+
+      & td {
+        height: 70px;
+        & a {
+          margin-bottom: 20px;
+          text-align: center;
+        }
+      }
     }
   }
 }
