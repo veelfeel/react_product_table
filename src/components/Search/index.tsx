@@ -9,15 +9,19 @@ import styles from "./Search.module.scss";
 export const Search: React.FC = () => {
   const dispatch = useAppDispatch();
 
+  const debouncedSearch = React.useRef(
+    debounce((query) => dispatch(setSearchValue(query)), 350)
+  ).current;
+
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(setSearchValue(event.target.value));
+    debouncedSearch(event.target.value);
   };
 
-  const debouncedResults = React.useMemo(() => debounce(handleChange, 300), []);
-
   React.useEffect(() => {
-    return () => debouncedResults.cancel();
-  });
+    return () => {
+      debouncedSearch.cancel();
+    };
+  }, [debouncedSearch]);
 
   return (
     <div className="mb-20">
@@ -25,7 +29,7 @@ export const Search: React.FC = () => {
         type="text"
         placeholder="Поиск по товарам..."
         className={styles.root}
-        onChange={debouncedResults}
+        onChange={handleChange}
       />
     </div>
   );

@@ -24,7 +24,7 @@ export const Table: React.FC = () => {
   const productFilterLength = productFilter.length;
 
   return (
-    <table className={styles}>
+    <table className={styles.root}>
       <thead>
         <tr>
           <th>

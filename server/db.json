@@ -6,7 +6,7 @@
       "sum": 5000,
       "qty": 20,
       "volume": 50000,
-      "name": "Book 1",
+      "name": "Рюкзак",
       "delivery_date": "10.01.2023",
       "currency": "₽"
     },
@@ -16,7 +16,7 @@
       "sum": 4500,
       "qty": 7,
       "volume": 90000,
-      "name": "Book 2",
+      "name": "Ноутбук",
       "delivery_date": "11.02.2019",
       "currency": "₽"
     }
@@ -28,7 +28,7 @@
       "sum": 7000,
       "qty": 100,
       "volume": 56000,
-      "name": "Backpack 1",
+      "name": "Смартфон",
       "delivery_date": "09.11.2022",
       "currency": "₽"
     },
@@ -38,9 +38,10 @@
       "sum": 3500,
       "qty": 12,
       "volume": 24500,
-      "name": "Backpack 2",
+      "name": "Зарядное устройство",
       "delivery_date": "05.08.2021",
       "currency": "₽"
     }
-  ]
+  ],
+  "cancel": []
 }

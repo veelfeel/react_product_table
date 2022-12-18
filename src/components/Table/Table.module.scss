@@ -1,6 +1,6 @@
 @import "../../scss/variables";
 
-table {
+.root {
   margin-bottom: 40px;
   width: 100%;
   border-radius: $radius;
@@ -9,6 +9,8 @@ table {
   text-align: center;
 
   & thead {
+    background-color: #6172d324;
+
     & th {
       padding: 12px;
       font-weight: 500;

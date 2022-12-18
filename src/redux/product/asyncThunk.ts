@@ -1,12 +1,12 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import URLs from "../../utils/apiUrls";
+import { URLs } from "../../utils/apiUrls";
 import { Product } from "./types";
 
 export const fetchProducts = createAsyncThunk<
   Product[],
   undefined,
   { rejectValue: string }
->("products/fetchProducts", async (params, { rejectWithValue }) => {
+>("products/fetchProducts", async (_, { rejectWithValue }) => {
   try {
     let dataArr = [];
 

@@ -2,6 +2,8 @@ import React from "react";
 import { selectCancelProducts } from "../../redux/cancel/selectors";
 import { useAppSelector } from "../../redux/store";
 
+import { cancelURL } from "../../utils/apiUrls";
+
 import styles from "./PopupMessage.module.scss";
 
 export const PopupMessage: React.FC = () => {
@@ -10,6 +12,24 @@ export const PopupMessage: React.FC = () => {
   const { cancelProducts } = useAppSelector(selectCancelProducts);
   const isActiveButton = Boolean(cancelProducts.length);
   const productNames = cancelProducts.map((product) => product.name).join(", ");
+
+  const addCancelProducts = async () => {
+    try {
+      const productsId = cancelProducts.map((product) => {
+        return { id: product.id };
+      });
+
+      await fetch(cancelURL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify([...productsId]),
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -25,7 +45,9 @@ export const PopupMessage: React.FC = () => {
             cancelProducts.length > 1 ? "товары" : "товар"
           }:`}</div>
           <div className={styles.names}>{`${productNames} ?`}</div>
-          <button className={styles.button_primary}>Применить</button>
+          <button onClick={addCancelProducts} className={styles.button_primary}>
+            Применить
+          </button>
           <button
             onClick={() => setIsShowPopup(false)}
             className={styles.button_secondary}
