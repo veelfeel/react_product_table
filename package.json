@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "product_table",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,11 +14,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently \"npm run server\" \"react-scripts start\"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "server": "json-server -w server/db.json -p 5000"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -40,8 +39,6 @@
   },
   "devDependencies": {
     "@types/lodash.debounce": "^4.0.7",
-    "concurrently": "^7.6.0",
-    "json-server": "^0.17.1",
     "lodash.debounce": "^4.0.8",
     "sass": "^1.56.2"
   }
