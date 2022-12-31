@@ -23,6 +23,8 @@ export const Table: React.FC = () => {
   const productFilter = productSortSearch(products, searchValue);
   const productFilterLength = productFilter.length;
 
+  console.log(productFilter);
+
   return (
     <table className={styles.root}>
       <thead>
